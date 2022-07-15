@@ -110,7 +110,7 @@ nav {
 
         .lijn {
             height: 6px;
-            width: 60px;
+            width: 400px;
             background-color: $wit;
             border-radius: 10px;
             margin-top: 4px;
@@ -120,11 +120,12 @@ nav {
 
     h1 {
         font-size: 26px;
-        width: 80%;
+        width: 90%;
     }
 
     h3 {
         font-size: 14px;
+        font-size: 50px;
     }
 
     h4 {
@@ -153,11 +154,11 @@ nav {
         content: " ";
         background-image: url(/assets/Path\ 1.svg);
         position: absolute;
-        bottom: 220px;
+        bottom: 400px;        
         right: -120px;
         left: 0;
-        height: 650px;
-        z-index: -10;
+        min-height: 600px;
+        z-index: 10;
         background-position: right center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -315,8 +316,6 @@ nav {
     }
 
 }
-
-
 
 
 .overMetHand {

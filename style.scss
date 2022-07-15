@@ -1,0 +1,656 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+
+//utilities
+$ctaGroen: #00BF26;
+$wit: #ffffff;
+$oranje: #FF8000;
+$grijs: #8F8F8F;
+$nogeengrijs: #F5F5F5;
+
+
+
+
+
+//algemeen
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+}
+
+body {
+    font-size: 14px;
+}
+
+h1 {
+    font-size: 54px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+h3 {
+    font-size: 24px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+
+.text-oranje {
+    color: $oranje
+}
+
+.text-grijs {
+    color: $grijs;
+}
+
+
+.regular {
+    font-weight: 400;
+}
+
+.semiBold {
+    font-weight: 600;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+
+.border-10 {
+    border-radius: 10px;
+}
+
+.laatsteNieuwsVoordelen:after {
+    visibility: hidden;
+}
+
+
+// sections
+
+
+nav {
+    color: $wit;
+    padding-top: 0;
+
+    .small {
+        display: block;
+        padding-top: 30px;
+        padding-bottom: 50px;
+        padding-left: 10px;
+    }
+
+    .wide {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .partner {
+        margin: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+
+        .lijn {
+            height: 6px;
+            width: 60px;
+            background-color: $wit;
+            border-radius: 10px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    }
+
+    h1 {
+        font-size: 26px;
+        width: 80%;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    h4 {
+        width: 90%;
+        padding: 20px 0px 20px;
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .lee {
+        width: 100%;
+        height: auto;
+        border: 10px solid $wit;
+        border-radius: 50px;
+    }
+
+    .knopOverons {
+        width: 178px;
+        background-color: $wit;
+        color: $oranje;
+        margin-bottom: 30px;
+        height: 45px;
+    }
+
+    :after {
+        content: " ";
+        background-image: url(/assets/Path\ 1.svg);
+        position: absolute;
+        bottom: 220px;
+        right: -120px;
+        left: 0;
+        height: 650px;
+        z-index: -10;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        visibility: visible;
+    }
+
+}
+
+
+.menu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: -100vh;
+    background: transparent linear-gradient(328deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
+}
+
+
+.opsomming {
+    .container {
+        margin-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    h2 {
+        width: 60%;
+    }
+
+    p {
+        width: 80%;
+    }
+
+    .lijnOranje {
+        width: 80px;
+        height: 3px;
+        background-color: $oranje;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .iconGradient {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
+        box-shadow: 0px 0px 15px 0px #00000042;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+
+}
+
+
+
+
+.laatsteNieuwsVoordelen {
+    position: relative;
+    margin: 50px auto 50px;
+
+
+    .nieuwsveld {
+        background-color: $nogeengrijs;
+        opacity: 0.9;
+        padding: 50px 30px;
+
+        h2 {
+            padding: 10px 0;
+        }
+
+        h5 {
+            margin: 0px 0px 2px 0px;
+        }
+    }
+
+    .voordelen {
+        padding: 50px 10px 50px 30px;
+    }
+
+    .gradientTerugbellen {
+        color: $wit;
+        background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
+        border-radius: 0px;
+
+        padding: 40px 30px 50px 30px;
+
+        h3 {
+            padding-bottom: 20px;
+        }
+
+        p {
+            padding-bottom: 10px;
+        }
+
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    button {
+        border-radius: 10px;
+        background-color: $ctaGroen;
+        color: $wit;
+        border: 1px solid $wit;
+        height: 50px;
+        width: 205px;
+        margin-top: 30px;
+    }
+
+    .telNummerKnop {
+        height: 50px;
+        width: 100%;
+        border: none;
+        border-radius: 10px;
+        padding: 25px;
+    }
+
+    .telNummerKnop::placeholder {
+        color: $grijs;
+        font-size: 20px;
+        opacity: .5;
+    }
+
+
+    .tick {
+        display: inline-block;
+        height: 16px;
+        width: 25px;
+        border-bottom: 5px solid #21910C;
+        border-left: 5px solid #21910C;
+        transform: rotate(-45deg);
+        margin-right: 15px;
+    }
+}
+
+
+.kennis {
+    padding: 40px 40px 0px 20px;
+
+    h2 {
+        width: 80%;
+    }
+
+    p {
+        width: 100%;
+        margin: 30px 0px;
+        line-height: 24px;
+    }
+
+}
+
+
+
+
+.overMetHand {
+    background: transparent linear-gradient(126deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
+    border-radius: 0px;
+    padding: 80px 20px 30px 20px;
+    margin: 0 auto;
+    color: $wit;
+
+    h2 {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    p {
+        width: 100%;
+        margin-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: .5;
+    }
+}
+
+
+.kernwaarden {
+    padding-top: 50px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+
+    .tekst {
+        width: 100%;
+        padding: 0 30px 0 20px;
+    }
+
+    button {
+        border-radius: 10px;
+        background-color: $ctaGroen;
+        color: $wit;
+        border: 1px solid $wit;
+        height: 50px;
+        width: 100%;
+        margin: 0px 0 60px 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        background-color: #0A1C2B
+    }
+}
+
+
+.footer {
+    background-color: #f5f5f5;
+
+    p {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .row {
+        padding: 60px 0px 20px 0px;
+    }
+
+
+    .col-12 {
+        text-align: center;
+        padding-bottom: 30px
+    }
+
+    .payoff {
+        font-size: 14px;
+    }
+
+}
+
+// ehh oplossing rare zaken (knoppen niet even groot en zo)
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 992px) {
+
+    body {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 54px;
+    }
+
+    h2 {
+        font-size: 38px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    h5 {
+        font-size: 16px;
+    }
+
+    .datum {
+        font-size: 14px;
+    }
+
+    //SECTIONS
+
+
+    nav {
+        .small {
+            display: none;
+        }
+
+        .wide {
+            display: block;
+        }
+
+        padding-bottom: 50px;
+        margin-top: 40px;
+
+        .partner {
+            margin-top: 150px;
+        }
+
+        .logo {
+            width: auto;
+            height: 100%;
+        }
+
+        .lee {
+            width: 851px;
+            height: 537px;
+        }
+
+        .login {
+            border-radius: 10px;
+            background-color: $ctaGroen;
+            color: $wit;
+            border: 1px solid $wit;
+            height: 45px;
+            width: 151px;
+            margin-right: 0 0 0 auto;
+        }
+
+
+
+        :after {
+            position: absolute;
+            bottom: -100px;
+            right: 720px;
+            left: 0;
+            height: 1241px;
+            z-index: -10;
+            background-position: right center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            visibility: visible;
+        }
+
+        h1 {
+            font-size: 54px;
+        }
+
+
+        h3 {
+            font-size: 24px;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+    }
+
+    .opsomming {
+        margin-top: 0px;
+
+        .container {
+            margin-top: 100px;
+            margin-bottom: 100px;
+        }
+
+        h2 {
+            width: 60%;
+        }
+
+        p {
+            width: 80%;
+        }
+
+
+        .iconGradient {
+            padding-left: 0;
+        }
+
+    }
+
+    .laatsteNieuwsVoordelen:after {
+        content: " ";
+        background-image: url(/assets/Background\ Element.svg);
+        position: absolute;
+        width: 1369px;
+        top: -280px;
+        right: 89%;
+        height: 1369px;
+        z-index: -10;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        visibility: visible;
+    }
+
+    .laatsteNieuwsVoordelen {
+        .nieuwsveld {
+            border: 8px solid white;
+            border-radius: 20px;
+            padding: 60px 0px 60px 40px;
+            width: 48%;
+            margin-right: 2%;
+
+
+            h2 {
+                padding: 0;
+                margin-bottom: 28px;
+            }
+
+            h5 {
+                margin: 0px 0px 8px 0px;
+            }
+        }
+
+        .voordelen {
+            padding: 0;
+        }
+
+
+        .gradientTerugbellen {
+            border-radius: 10px;
+            width: 100%;
+            padding: 35px 30px 0px 30px;
+
+            h3 {
+                margin-bottom: 20px;
+            }
+
+            p {
+                padding-bottom: 0;
+            }
+
+            .tbveld {
+                position: relative;
+                background-color: $wit;
+            }
+
+            button {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+        }
+    }
+
+    .kennis {
+        margin: 150px auto 50px;
+
+        h2 {
+            width: 70%;
+        }
+
+        p {
+            width: 75%;
+            line-height: 20px;
+        }
+
+    }
+
+    .overMetHand {
+        border-radius: 41px;
+        padding: 80px 80px 45px;
+
+        h2 {
+            width: 60%;
+            margin-bottom: 0;
+        }
+
+        p {
+            width: 70%;
+            margin-top: 20px;
+            margin-bottom: 0;
+        }
+
+        img {
+            position: absolute;
+            bottom: -40px;
+            right: -50px;
+            opacity: 1;
+        }
+    }
+
+    .kernwaarden {
+        margin: 150px auto 150px;
+
+        img {
+            border-radius: 10px;
+            width: 100%;
+            height: auto;
+        }
+
+        button {
+            width: 269px;
+        }
+
+    }
+
+    .footer {
+        .col-12 {
+            text-align: left;
+        }
+    }
+
+}

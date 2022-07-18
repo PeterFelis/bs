@@ -11,18 +11,12 @@ $nogeengrijs: #F5F5F5;
 
 
 
-
-
 //algemeen
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     overflow-x: hidden;
-}
-
-body {
-    font-size: 14px;
 }
 
 h1 {
@@ -67,7 +61,6 @@ h5 {
     font-weight: 700;
 }
 
-
 .border-10 {
     border-radius: 10px;
 }
@@ -83,7 +76,8 @@ h5 {
 nav {
     color: $wit;
     padding-top: 0;
-
+    
+    
     .small {
         display: block;
         padding-top: 30px;
@@ -107,10 +101,10 @@ nav {
     .hamburger {
         display: flex;
         flex-direction: column;
-
+    
         .lijn {
             height: 6px;
-            width: 400px;
+            width: 40px;
             background-color: $wit;
             border-radius: 10px;
             margin-top: 4px;
@@ -125,7 +119,6 @@ nav {
 
     h3 {
         font-size: 14px;
-        font-size: 50px;
     }
 
     h4 {
@@ -140,6 +133,7 @@ nav {
         height: auto;
         border: 10px solid $wit;
         border-radius: 50px;
+        box-shadow: 0px 0px 40px #0000001A;
     }
 
     .knopOverons {
@@ -148,17 +142,18 @@ nav {
         color: $oranje;
         margin-bottom: 30px;
         height: 45px;
+        border-radius: 10px;
     }
 
-    :after {
-        content: " ";
+    ::after {
+        content: "";
         background-image: url(/assets/Path\ 1.svg);
-        position: absolute;
-        bottom: 400px;        
+        position: absolute;  
+        bottom:40vh;     
         right: -120px;
         left: 0;
         min-height: 600px;
-        z-index: 10;
+        z-index: -10;
         background-position: right center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -187,11 +182,16 @@ nav {
     }
 
     h2 {
-        width: 60%;
+        width: 70%;
     }
 
     p {
-        width: 80%;
+        width: 100%;
+    }
+
+    .pft{
+        margin-left: 10px;
+        margin-top: 30px;
     }
 
     .lijnOranje {
@@ -211,7 +211,7 @@ nav {
         justify-content: center;
         background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
         box-shadow: 0px 0px 15px 0px #00000042;
-        margin-top: 30px;
+
         margin-left: 10px;
     }
 
@@ -399,7 +399,6 @@ nav {
 
 }
 
-// ehh oplossing rare zaken (knoppen niet even groot en zo)
 
 
 
@@ -408,7 +407,7 @@ nav {
 
 
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
 
     body {
         font-size: 16px;
@@ -438,6 +437,9 @@ nav {
         font-size: 14px;
     }
 
+    .menu {
+        display: none;
+    }
     //SECTIONS
 
 
@@ -479,17 +481,11 @@ nav {
 
 
 
-        :after {
-            position: absolute;
-            bottom: -100px;
-            right: 720px;
-            left: 0;
-            height: 1241px;
-            z-index: -10;
-            background-position: right center;
-            background-repeat: no-repeat;
-            background-size: contain;
-            visibility: visible;
+        ::after {
+            bottom: -20vh;
+            right: 400px;
+            min-height: 1241px;
+
         }
 
         h1 {
@@ -513,6 +509,7 @@ nav {
             margin-top: 100px;
             margin-bottom: 100px;
         }
+        
 
         h2 {
             width: 60%;
@@ -522,6 +519,10 @@ nav {
             width: 80%;
         }
 
+        .pft{
+        margin-left:0;
+        margin-top: 0;
+    }
 
         .iconGradient {
             padding-left: 0;

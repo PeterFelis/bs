@@ -10273,10 +10273,6 @@ body {
   overflow-x: hidden;
 }
 
-body {
-  font-size: 14px;
-}
-
 h1, .h1 {
   font-size: 54px;
 }
@@ -10351,7 +10347,7 @@ nav .hamburger {
 }
 nav .hamburger .lijn {
   height: 6px;
-  width: 400px;
+  width: 40px;
   background-color: #ffffff;
   border-radius: 10px;
   margin-top: 4px;
@@ -10363,7 +10359,6 @@ nav h1, nav .h1 {
 }
 nav h3, nav .h3 {
   font-size: 14px;
-  font-size: 50px;
 }
 nav h4, nav .h4 {
   width: 90%;
@@ -10376,6 +10371,7 @@ nav .lee {
   height: auto;
   border: 10px solid #ffffff;
   border-radius: 50px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1019607843);
 }
 nav .knopOverons {
   width: 178px;
@@ -10383,16 +10379,17 @@ nav .knopOverons {
   color: #FF8000;
   margin-bottom: 30px;
   height: 45px;
+  border-radius: 10px;
 }
-nav :after {
-  content: " ";
+nav ::after {
+  content: "";
   background-image: url(/assets/Path\ 1.svg);
   position: absolute;
-  bottom: 400px;
+  bottom: 40vh;
   right: -120px;
   left: 0;
   min-height: 600px;
-  z-index: 10;
+  z-index: -10;
   background-position: right center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10415,10 +10412,14 @@ nav :after {
   margin-bottom: 0px;
 }
 .opsomming h2, .opsomming .h2 {
-  width: 60%;
+  width: 70%;
 }
 .opsomming p {
-  width: 80%;
+  width: 100%;
+}
+.opsomming .pft {
+  margin-left: 10px;
+  margin-top: 30px;
 }
 .opsomming .lijnOranje {
   width: 80px;
@@ -10436,7 +10437,6 @@ nav :after {
   justify-content: center;
   background: radial-gradient(circle, rgb(255, 128, 0) 0%, rgb(255, 162, 0) 100%);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2588235294);
-  margin-top: 30px;
   margin-left: 10px;
 }
 
@@ -10593,7 +10593,7 @@ nav :after {
   font-size: 14px;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 576px) {
   body {
     font-size: 16px;
   }
@@ -10614,6 +10614,9 @@ nav :after {
   }
   .datum {
     font-size: 14px;
+  }
+  .menu {
+    display: none;
   }
   nav {
     padding-bottom: 50px;
@@ -10645,17 +10648,10 @@ nav :after {
     width: 151px;
     margin-right: 0 0 0 auto;
   }
-  nav :after {
-    position: absolute;
-    bottom: -100px;
-    right: 720px;
-    left: 0;
-    height: 1241px;
-    z-index: -10;
-    background-position: right center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    visibility: visible;
+  nav ::after {
+    bottom: -20vh;
+    right: 400px;
+    min-height: 1241px;
   }
   nav h1, nav .h1 {
     font-size: 54px;
@@ -10678,6 +10674,10 @@ nav :after {
   }
   .opsomming p {
     width: 80%;
+  }
+  .opsomming .pft {
+    margin-left: 0;
+    margin-top: 0;
   }
   .opsomming .iconGradient {
     padding-left: 0;

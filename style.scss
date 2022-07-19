@@ -1,4 +1,3 @@
-@import "node_modules/bootstrap/scss/bootstrap";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
 
 
@@ -68,8 +67,11 @@ h5 {
 
 // sections
 nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     color: $wit;
     position: relative;
+    background-color: #FFA200;
 
 
     .small {

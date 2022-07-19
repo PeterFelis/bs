@@ -61,28 +61,21 @@ h5 {
     font-weight: 700;
 }
 
-.border-10 {
-    border-radius: 10px;
-}
 
 .laatsteNieuwsVoordelen:after {
     visibility: hidden;
 }
 
-
 // sections
-
-
 nav {
     color: $wit;
-    padding-top: 0;
-    
-    
+    position: relative;
+
+
     .small {
         display: block;
-        padding-top: 30px;
-        padding-bottom: 50px;
-        padding-left: 10px;
+        padding-top: 2rem;
+        padding-bottom: 3rem;
     }
 
     .wide {
@@ -94,21 +87,17 @@ nav {
         height: auto;
     }
 
-    .partner {
-        margin: 0;
-    }
-
     .hamburger {
         display: flex;
         flex-direction: column;
-    
+
         .lijn {
-            height: 6px;
-            width: 40px;
+            height: .4rem;
+            width: 3rem;
             background-color: $wit;
-            border-radius: 10px;
-            margin-top: 4px;
-            margin-bottom: 4px;
+            border-radius: .6rem;
+            margin-top: .25rem;
+            margin-bottom: .25rem;
         }
     }
 
@@ -123,7 +112,7 @@ nav {
 
     h4 {
         width: 90%;
-        padding: 20px 0px 20px;
+        padding: 10px 0px 10px;
         font-size: 14px;
         line-height: 24px;
     }
@@ -140,7 +129,7 @@ nav {
         width: 178px;
         background-color: $wit;
         color: $oranje;
-        margin-bottom: 30px;
+        margin-bottom: 2rem;
         height: 45px;
         border-radius: 10px;
     }
@@ -148,11 +137,11 @@ nav {
     ::after {
         content: "";
         background-image: url(/assets/Path\ 1.svg);
-        position: absolute;  
-        bottom:40vh;     
-        right: -120px;
+        position: absolute;
+        bottom: 10%;
+        right: -180px;
         left: 0;
-        min-height: 600px;
+        min-height: 800px;
         z-index: -10;
         background-position: right center;
         background-repeat: no-repeat;
@@ -186,10 +175,10 @@ nav {
     }
 
     p {
-        width: 100%;
+        width: 90%;
     }
 
-    .pft{
+    .pft {
         margin-left: 10px;
         margin-top: 30px;
     }
@@ -405,12 +394,12 @@ nav {
 
 
 
-
-
-@media only screen and (min-width: 576px) {
+//md
+@media only screen and (min-width: 768px) {
 
     body {
         font-size: 16px;
+        baackground-color: #00BF26;
     }
 
     h1 {
@@ -440,6 +429,7 @@ nav {
     .menu {
         display: none;
     }
+
     //SECTIONS
 
 
@@ -464,10 +454,7 @@ nav {
             height: 100%;
         }
 
-        .lee {
-            width: 851px;
-            height: 537px;
-        }
+
 
         .login {
             border-radius: 10px;
@@ -482,9 +469,10 @@ nav {
 
 
         ::after {
-            bottom: -20vh;
-            right: 400px;
-            min-height: 1241px;
+            bottom: -10%;
+            right: 20%;
+            height: 1241px;
+            left: -50px;
 
         }
 
@@ -506,10 +494,11 @@ nav {
         margin-top: 0px;
 
         .container {
-            margin-top: 100px;
+            margin-top: 00px;
             margin-bottom: 100px;
         }
-        
+
+
 
         h2 {
             width: 60%;
@@ -519,10 +508,10 @@ nav {
             width: 80%;
         }
 
-        .pft{
-        margin-left:0;
-        margin-top: 0;
-    }
+        .pft {
+            margin-left: 0;
+            margin-top: 0;
+        }
 
         .iconGradient {
             padding-left: 0;
@@ -653,4 +642,24 @@ nav {
         }
     }
 
+}
+
+//l
+@media only screen and (min-width: 992px) {
+    body {
+        background-color: aquamarine;
+
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-color: rgb(255, 127, 127);
+
+        .lee {
+            width: 851px;
+            height: 537px;
+        }
+    }
 }

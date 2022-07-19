@@ -11,11 +11,19 @@ $nogeengrijs: #F5F5F5;
 
 
 //algemeen
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+
 }
 
 h1 {
@@ -65,66 +73,100 @@ h5 {
     visibility: hidden;
 }
 
-// sections
-nav {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    color: $wit;
-    position: relative;
-    background-color: #FFA200;
 
+// sections
+.popmenu {
+    visibility: hidden;
+}
+
+
+
+
+
+
+nav {
+    width: 1200px;
+    margin: 0 auto;
 
     .small {
-        display: block;
-        padding-top: 2rem;
-        padding-bottom: 3rem;
+        display: none
     }
 
     .wide {
-        display: none;
-    }
-
-    .logo {
         width: 100%;
-        height: auto;
-    }
-
-    .hamburger {
+        margin-top: 30px;
         display: flex;
-        flex-direction: column;
+        color: $wit;
+        align-items: center;
 
-        .lijn {
-            height: .4rem;
-            width: 3rem;
-            background-color: $wit;
-            border-radius: .6rem;
-            margin-top: .25rem;
-            margin-bottom: .25rem;
+        .logo {
+            width: 100%;
+            height: auto;
+            flex: 1;
+        }
+
+        .menu {
+            flex: 10;
+            display: flex;
+            justify-content: space-around;
+            margin-left: 14%;
+            margin-right: 17%;
+        }
+
+        .login {
+            flex: 1;
+
+            button {
+                width: 151px;
+                height: 45px;
+                border: none;
+                background-color: $ctaGroen;
+                color: $wit;
+                border-radius: 8px;
+            }
         }
     }
 
+}
+
+main {
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+    color: $wit;
+    position: relative;
+
+    .partner {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+    }
+
     h1 {
-        font-size: 26px;
         width: 90%;
     }
 
-    h3 {
-        font-size: 14px;
-    }
 
     h4 {
         width: 90%;
-        padding: 10px 0px 10px;
-        font-size: 14px;
-        line-height: 24px;
     }
 
-    .lee {
-        width: 100%;
-        height: auto;
-        border: 10px solid $wit;
-        border-radius: 50px;
-        box-shadow: 0px 0px 40px #0000001A;
+    .foto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .lee {
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 0px 40px #0000001A;
+            transform: translateX(140px) scale(1.4, 1.4)
+        }
     }
 
     .knopOverons {
@@ -140,30 +182,23 @@ nav {
         content: "";
         background-image: url(/assets/Path\ 1.svg);
         position: absolute;
-        bottom: 10%;
-        right: -180px;
-        left: 0;
-        min-height: 800px;
+        right: 27%;
+        bottom: -50px;
+        height: 951px;
+        width: 1241px;
         z-index: -10;
         background-position: right center;
         background-repeat: no-repeat;
         background-size: cover;
         visibility: visible;
+        filter: blur(1px);
     }
 
+
 }
 
 
-.menu {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 0;
-    left: -100vh;
-    background: transparent linear-gradient(328deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
-}
+
 
 
 .opsomming {
@@ -397,11 +432,10 @@ nav {
 
 
 //md
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
 
     body {
         font-size: 16px;
-        baackground-color: #00BF26;
     }
 
     h1 {
@@ -436,6 +470,7 @@ nav {
 
 
     nav {
+
         .small {
             display: none;
         }
@@ -454,6 +489,20 @@ nav {
         .logo {
             width: auto;
             height: 100%;
+        }
+
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+
+            .lijn {
+                height: .4rem;
+                width: 3rem;
+                background-color: $wit;
+                border-radius: .6rem;
+                margin-top: .25rem;
+                margin-bottom: .25rem;
+            }
         }
 
 
@@ -644,24 +693,18 @@ nav {
         }
     }
 
-}
-
-//l
-@media only screen and (min-width: 992px) {
-    body {
-        background-color: aquamarine;
-
-
+    .popmenu {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: -100vh;
+        background: transparent linear-gradient(328deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
     }
-}
 
-@media only screen and (min-width: 1200px) {
-    body {
-        background-color: rgb(255, 127, 127);
 
-        .lee {
-            width: 851px;
-            height: 537px;
-        }
-    }
+
+
 }

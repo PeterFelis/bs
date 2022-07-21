@@ -17,13 +17,18 @@ $nogeengrijs: #F5F5F5;
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
-
+    width: 100vw;
 }
 
 h1 {
@@ -184,7 +189,7 @@ main {
         background-position: right center;
         background-repeat: no-repeat;
         background-size: cover;
-        visibility: visible;
+        visibility: hidden;
         filter: blur(1px);
     }
 

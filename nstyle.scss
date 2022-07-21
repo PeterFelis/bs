@@ -1,0 +1,681 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+//kleuren
+$ctaGroen: #00BF26;
+$wit: #ffffff;
+$grijs: #F5F5F5;
+
+$kop: #242424;
+$platDonker: #444444;
+$platLicht: #8f8f8f;
+$oranje: #FF8000;
+
+// reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 26px;
+}
+
+h2 {
+    font-size: 26px;
+    color: $kop;
+}
+
+h3 {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 18px; // ja! bij de rondjes
+}
+
+h5 {
+    font-size: 15px; // was 16 voor bekijk al onze diensten naar 16
+}
+
+.ctatext {
+    color: $oranje;
+    font-weight: 600;
+    margin-top: 2em;
+    font-size: 16px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.popmenu {
+    display: none;
+}
+
+nav {
+    padding: 20px 20px 50px 20px;
+
+
+    .wide {
+        display: none;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        flex: 1;
+    }
+
+    .small {
+        display: flex;
+
+        .hamburger {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .lijn {
+                height: .4rem;
+                width: 3rem;
+                background-color: $wit;
+                border-radius: .6rem;
+                margin-top: .25rem;
+                margin-bottom: .25rem;
+            }
+        }
+    }
+
+
+}
+
+main {
+    padding: 0 20px 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: $wit;
+    position: relative;
+    overflow: hidden;
+
+    .partner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex: 1;
+
+        h1 {
+            width: 80%;
+        }
+
+
+        h3 {
+            width: 80%;
+            font-weight: 400;
+            margin: .8em 0 .8em 0;
+        }
+    }
+
+    .foto {
+        width: 100%;
+
+        .lee {
+            width: 100%;
+            height: auto;
+            box-shadow: 0px 0px 40px #0000001A;
+            border: 10px solid $wit;
+            border-radius: 20px;
+        }
+    }
+
+    .knopOverons {
+        width: 178px;
+        background-color: $wit;
+        color: $oranje;
+        margin-bottom: 2rem;
+        height: 45px;
+        border-radius: 10px;
+        border: 1px solid $wit;
+        font-size: 16px;
+    }
+
+    :after {
+        content: "";
+        background-image: url(/assets/Path\ 1.svg);
+        position: absolute;
+        right: -46vw;
+        top: -40vh;
+        height: 951px;
+        width: 1241px;
+        z-index: -10;
+        background-position: right center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        filter: blur(1px);
+    }
+}
+
+.opsomming {
+    padding: 0px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        width: 80%;
+        line-height: 1.2em;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+
+    h4 {
+        margin-top: 1em;
+        margin-bottom: 1em;
+        font-weight: 500;
+    }
+
+    h5 {
+        margin-top: 1.5em;
+    }
+
+    p {
+        width: 90%;
+        color: $platLicht;
+        line-height: 1.8em;
+    }
+
+    .zwart {
+        color: $kop;
+    }
+
+    .flex2 {
+        flex: 2;
+    }
+
+    .card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .lijnOranje {
+        width: 80px;
+        height: 3px;
+        background-color: $oranje;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .iconGradient {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
+        box-shadow: 0px 0px 15px 0px #00000042;
+        margin-top: 3em;
+        margin-bottom: 1.2;
+    }
+}
+
+.nieuwsVoordelen {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .nieuwsveld {
+        flex: 1;
+        background-color: $grijs;
+        padding: 2em 20px 3em 20px;
+        opacity: 0.9;
+
+
+        h2 {
+            padding: 10px 0;
+        }
+
+        h5 {
+            margin: 1em 0px 0px 0px;
+        }
+
+    }
+
+
+    .voordelenTB {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            margin-bottom: 1em;
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .voordelen {
+            padding: 50px 20px 100px 20px;
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            li {
+                margin-bottom: .5em;
+                font-size: 16px;
+            }
+
+            .tick {
+                display: inline-block;
+                height: 16px;
+                width: 25px;
+                border-bottom: 5px solid #21910C;
+                border-left: 5px solid #21910C;
+                transform: rotate(-45deg);
+                margin-right: 15px;
+            }
+
+        }
+
+
+        .gradientTerugbellen {
+            flex: 1;
+            color: $wit;
+            background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
+            padding: 2em 2em 4em 2em;
+
+            h2 {
+                color: $wit;
+                padding-bottom: 20px;
+            }
+
+            p {
+                padding-bottom: 10px;
+            }
+
+
+            .belOnsTerug {
+                position: relative;
+            }
+
+            .telNummerKnop {
+                height: 50px;
+                width: 100%;
+                border: none;
+                border-radius: 10px;
+                padding: 25px;
+
+            }
+
+            .telNummerKnop::placeholder {
+                color: $platLicht;
+                font-size: 18px;
+                opacity: .5;
+            }
+
+            button {
+                border-radius: 10px;
+                background-color: $ctaGroen;
+                color: $wit;
+                border: 1px solid $wit;
+                height: 50px;
+                width: 205px;
+                margin-top: 1em;
+
+            }
+        }
+    }
+}
+
+
+.kennis {
+    padding: 60px 20px 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .usp {
+        flex: 1;
+
+    }
+
+    h2 {
+        width: 80%;
+    }
+
+    p {
+        width: 90%;
+        margin: 30px 0px;
+        line-height: 24px;
+    }
+
+    .caroussel {
+        flex: 1;
+        display: flex;
+    }
+}
+
+.overMetHand {
+    background: transparent linear-gradient(162deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
+    color: $wit;
+    padding: 50px 20px 50px 20px;
+
+    h2 {
+        margin-bottom: 20px;
+        line-height: 1.4em;
+        color: $wit;
+    }
+
+    p {
+        margin-top: 1em;
+        padding-bottom: 1em;
+        line-height: 1.7em;
+        opacity: .8;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+.kernwaarden {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h2 {
+        margin-bottom: 20px;
+    }
+
+    p {
+        margin-top: 1em;
+        padding-bottom: 1em;
+        line-height: 1.7em;
+    }
+
+    .tekst {
+        padding: 60px 20px 0 20px;
+        flex: 3;
+
+        button {
+            border-radius: 10px;
+            background-color: $ctaGroen;
+            color: $wit;
+            height: 50px;
+            border: 1px solid $wit;
+            width: 100%;
+            margin: 1em 0 0 0;
+            font-size: 16px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+    }
+
+    .gezicht {
+        flex: 4;
+        padding-top: 80px;
+
+        img {
+            width: 100%;
+            height: auto;
+            background-color: #0A1C2B;
+        }
+    }
+
+}
+
+footer {
+    background-color: #f5f5f5;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+
+
+    .contactInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        p {
+            font-size: 16px;
+            margin: 0;
+        }
+
+        .logo {
+            flex: 1;
+        }
+
+        .naw {
+            margin-top: 2em;
+            flex: 1;
+            text-align: center;
+
+        }
+
+        .tel {
+            margin-top: 2em;
+            flex: 1;
+            text-align: center;
+        }
+
+        .opening {
+            margin-top: 2em;
+            flex: 1;
+            text-align: center;
+        }
+    }
+
+    .copyright {
+        display: flex;
+        margin-top: 5em;
+        flex-direction: column;
+        align-items: center;
+
+        .payoff {
+            font-size: 14px;
+            flex: 2;
+            text-align: center;
+            max-width: 79%;
+        }
+
+        .klopper {
+            margin-top: 3em;
+            flex: 1;
+            display: flex;
+            align-content: center;
+            font-size: 14px;
+            justify-content: flex-end;
+        }
+
+    }
+
+}
+
+
+
+
+@media only screen and (min-width: 700px) {
+
+    h2 {
+        font-size: 30px;
+    }
+
+    main {
+        .partner {
+            text-align: center;
+            align-items: center;
+
+            h3 {
+                margin: 0 auto;
+                font-size: 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+                max-width: 60%;
+                margin: .5em auto .5em auto;
+            }
+
+            button {
+                margin: 3em 0 3em 0;
+            }
+        }
+
+        :after {
+            right: -20vw;
+            top: -25vh;
+        }
+    }
+
+    .opsomming {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card {
+            min-width: 50%;
+        }
+
+        .flex2 {
+            min-width: 100%;
+        }
+    }
+
+    .voordelen {
+        width: 55%;
+        margin: 0 auto;
+    }
+
+    .gradientTerugbellen {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 400px;
+
+        .telNummerKnop {
+            position: absolute;
+            margin-top: 1em;
+            left: 0;
+            top: 0;
+        }
+
+        button {
+            position: absolute;
+            top: 0;
+            right: 0;
+
+        }
+    }
+
+    .kennis {
+        .usp {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+        }
+    }
+
+    .overMetHand {
+        background: transparent linear-gradient(126deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
+        position: relative;
+        margin: 0 auto;
+        color: $wit;
+
+        h2 {
+            width: 60%;
+            margin-bottom: 20px;
+            line-height: 1.2em;
+        }
+
+        p {
+            width: 75%;
+            margin-top: 10px;
+            padding-bottom: 20px;
+        }
+
+        img {
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            opacity: .8;
+        }
+    }
+
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    main {
+        .partner {
+            flex-direction: row;
+
+            .container {
+                flex: 1;
+                //height: 100%;
+                //display: flex;
+                flex-direction: column;
+            }
+
+            h1 {
+                width: 90%;
+            }
+
+
+            h4 {
+                width: 90%;
+            }
+
+            .foto {
+                flex: 1;
+                width: 100%;
+                height: auto;
+
+                .lee {
+                    width: 100%;
+                    height: auto;
+                    box-shadow: 0px 0px 40px #0000001A;
+                    transform: translateX(140px) scale(1.4, 1.4)
+                }
+            }
+        }
+    }
+
+    .opsomming {
+
+        .card {
+            min-width: 25%;
+        }
+
+        .flex2 {
+            min-width: 100%;
+            margin: 10em auto 2em auto;
+        }
+    }
+}

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nstyle.css">
 
 
     <title>19-07-2022</title>
@@ -14,46 +14,49 @@
 <!-- https://glidejs.com/docs/setup/-->
 
 <body>
-    <nav>
-        <div class="small">
-            <img class="logo" src="assets/outhands-logo-zwart (12).svg">
-            <div class="hamburger" id="hamburger">
-                <div class="lijn"></div>
-                <div class="lijn"></div>
-                <div class="lijn"></div>
-            </div>
-        </div>
-
-
-        <div class="wide">
-            <img class="logo" src="assets/outhands-logo-zwart (12).svg" />
-            <div class="menu">
-                <div>Over ons</div>
-                <div>Diensten</div>
-                <div>Thema's</div>
-                <div>Nieuws</div>
-                <div>Contact</div>
-            </div>
-            <div class="login">
-                <button>Login</button>
-            </div>
-        </div>
-    </nav>
-
-
     <main>
+        <nav>
+            <div class="small">
+                <img class="logo" src="assets/outhands-logo-zwart (12).svg">
+                <div class="hamburger" id="hamburger">
+                    <div class="lijn"></div>
+                    <div class="lijn"></div>
+                    <div class="lijn"></div>
+                </div>
+            </div>
+
+
+            <div class="wide">
+                <img class="logo" src="assets/outhands-logo-zwart (12).svg" />
+                <div class="menu">
+                    <div>Over ons</div>
+                    <div>Diensten</div>
+                    <div>Thema's</div>
+                    <div>Nieuws</div>
+                    <div>Contact</div>
+                </div>
+                <div class="login">
+                    <button>Login</button>
+                </div>
+            </div>
+        </nav>
+
+
+
         <div class="partner">
-            <h3 class="regular">Outhands Internet & Media</h3>
-            <h1 class="bold">Dé partner in web- sites en applicaties</h1>
-            <h4 class="regular">Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                <span class="bold">laboris nisi ut aliquip</span> ex ea
-                commodo.
-            </h4>
-            <button class="btn semiBold knopOverons">over ons</button>
-        </div>
-        <div class="foto">
-            <img class="lee" src="/assets/lee.png" />
-        </div>
+            <div class="container">
+                <h3>Outhands Internet & Media</h3>
+                <h1 class="bold">Dé partner in web- sites en applicaties</h1>
+                <h3>Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    <span class="bold">laboris nisi ut aliquip</span> ex ea
+                    commodo.
+                </h3>
+
+                <button class="knopOverons">over ons</button>
+            </div>
+            <div class="foto">
+                <img class="lee" src="/assets/lee.png" />
+            </div>
         </div>
     </main>
 
@@ -69,24 +72,24 @@
     <article class="opsomming">
         <div class="card flex2">
             <h2 class="bold">Sed ut perspiciatis unde omnis iste.</h2>
-            <p>Lorem ipsum dolor sit amet consectetur <span class="bold">adipisicing</span>
+            <p class="zwart">Lorem ipsum dolor sit amet consectetur <span class="bold">adipisicing</span>
                 elit. Obcaecati quae <spam class="bold">earum corporis </spam>accusantium amet,
                 atque,
-                perspiciatis itaque hic necessitatibus, deserunt doloribus.</p>
-            <h5 class="text-oranje semiBold">Bekijk al onze diensten
+                perspiciatis itaque hic.</p>
+            <h5 class="ctatext">Bekijk al onze diensten
                 <img src="assets/Icon awesome-long-arrow-alt-right-1.svg">
             </h5>
         </div>
 
 
-        <div class="card flex1">
+        <div class="card">
             <div class="iconGradient">
                 <img src="assets/001-piggy-bank.svg">
             </div>
             <div>
                 <h4>Concept & Strategie</h4>
                 <div class="lijnOranje"></div>
-                <p class="text-grijs">
+                <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia, ipsum vitae?
                     Debitis
                     dolorem dicta voluptatem consequatur cum animi.
@@ -95,7 +98,7 @@
         </div>
 
 
-        <div class="card flex1">
+        <div class="card">
             <div class="iconGradient">
                 <img src="assets/002-check.svg">
             </div>
@@ -174,48 +177,46 @@
         </div>
     </article>
 
-    <aside class="laatsteNieuwsVoordelen">
+    <aside class="nieuwsVoordelen">
         <div class="nieuwsveld">
-            <div class="nieuwsveldContent">
-                <h2 class="bold">Het laatste nieuws</h2>
-                <ul>
-                    <li>
-                        <h5 class="bold">Klanten van ABN AMRO kunnen niet
-                            internetbankieren...
-                        </h5>
-                        <p class="datum regular">oktober 28, 2021</p>
-                    </li>
-                    <li>
-                        <h5 class="bold">Britse waakhond geeft gezichtsscanbedrijf Clearview AI...
-                        </h5>
-                        <p class="datum regular">oktober 28, 2021</p>
-                    </li>
-                    <li>
-                        <h5 class="bold">WhatsApp werkt na 24 oktober niet meer op iPhone 5 en....
-                        </h5>
-                        <p class="datum regular">oktober 28, 2021</p>
-                    </li>
-                    <li>
-                        <h5 class="bold">Tinder-eigenaar mag eigen betaalmethode blijven..</h5>
-                        <p class="datum regular">oktober 28, 2021</p>
-                    </li>
-                    <li>
-                        <h5 class="bold">Experts: breng toezicht op algoritmes onder bij...</h5>
-                        <p class="datum regular">oktober 28, 2021</p>
-                    </li>
-                </ul>
-                <h5 class="text-oranje semiBold">Bekijk al onze nieuwsberichten
-                    <img src="assets/Icon awesome-long-arrow-alt-right-1.svg">
-                </h5>
-            </div>
+            <h2 class="bold">Het laatste nieuws</h2>
+            <ul>
+                <li>
+                    <h5 class="bold">Klanten van ABN AMRO kunnen niet
+                        internetbankieren...
+                    </h5>
+                    <p class="datum regular">oktober 28, 2021</p>
+                </li>
+                <li>
+                    <h5 class="bold">Britse waakhond geeft gezichtsscanbedrijf Clearview AI...
+                    </h5>
+                    <p class="datum regular">oktober 28, 2021</p>
+                </li>
+                <li>
+                    <h5 class="bold">WhatsApp werkt na 24 oktober niet meer op iPhone 5 en....
+                    </h5>
+                    <p class="datum regular">oktober 28, 2021</p>
+                </li>
+                <li>
+                    <h5 class="bold">Tinder-eigenaar mag eigen betaalmethode blijven..</h5>
+                    <p class="datum regular">oktober 28, 2021</p>
+                </li>
+                <li>
+                    <h5 class="bold">Experts: breng toezicht op algoritmes onder bij...</h5>
+                    <p class="datum regular">oktober 28, 2021</p>
+                </li>
+            </ul>
+            <h5 class="ctatext">Bekijk al onze nieuwsberichten
+                <img src="assets/Icon awesome-long-arrow-alt-right-1.svg">
+            </h5>
         </div>
 
         <div class="voordelenTB">
             <div class="voordelen">
-                <h3 class="h3 semiBold">De Voordelen van Outhands</h3>
+                <h2>De Voordelen van Outhands</h2>
                 <ul>
                     <li>
-                        <div class="tick"></div>Lorem ipsum dolor sit amet consectetur.
+                        <div class="tick"></div>Lorem ipsum dolor sit amet
                     </li>
                     <li>
                         <div class="tick"></div>Lorem ipsum dolor sit amet.
@@ -226,15 +227,18 @@
                     <li>
                         <div class="tick"></div>Lorem ipsum dolor sit amet.
                     </li>
+                    <li>
+                        <div class="tick"></div>Lorem ipsum dolor sit amet.
+                    </li>
                 </ul>
             </div>
 
             <div class="gradientTerugbellen">
-                <h3>Teruggebeld worden?</h3>
+                <h2>Teruggebeld worden?</h2>
                 <p>
                     Wij geven de voorkeur aan een persoonlijk gesprek. Laat je
                     telefoonnummer achter.
-                <p>
+                </p>
                 <div class="belOnsTerug">
                     <input type="tel" class="telNummerKnop" placeholder="Telefoonnummer" />
                     <button>Bel mij terug</button>
@@ -254,14 +258,13 @@
                 exercitation
                 ullamco
                 laboris nisi ut aliquip.</p>
-            <h5 class="text-oranje semiBold">Meer over ons
+            <h5 class="ctatext">Meer over ons
                 <img src="assets/Icon awesome-long-arrow-alt-right-1.svg">
             </h5>
         </div>
 
         <div class="caroussel">
             <!-- Carousel -->
-
 
         </div>
     </section>
@@ -304,7 +307,7 @@
 
     <section class="kernwaarden">
         <div class="tekst">
-            <h3 class="bold">Onze kernwaarde</h3>
+            <h2>Onze kernwaarde</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                 tempor
                 incididunt ut
@@ -352,8 +355,8 @@
             </div>
             <div class="copyright">
                 <p class="payoff">Copyright 2022
-                    &middot;Alle rechten voorbehouden&middot;Algemene
-                    voorwaarden&middot;Privacyverklaring
+                    &middot; Alle rechten voorbehouden &middot; Algemene
+                    voorwaarden &middot; Privacyverklaring
                 </p>
                 <p class="klopper">Ontwikkeling door&nbsp;
                     <span class="bold">P.Felis</span>

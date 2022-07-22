@@ -240,7 +240,6 @@ main {
 }
 
 .nieuwsVoordelen {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -250,7 +249,6 @@ main {
         background-color: $grijs;
         padding: 2em 20px 3em 20px;
         opacity: 0.9;
-
 
         h2 {
             padding: 10px 0;
@@ -263,7 +261,7 @@ main {
     }
 
 
-    .voordelenTB {
+    .voordelen {
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -274,79 +272,79 @@ main {
             font-weight: 600;
         }
 
-        .voordelen {
-            padding: 50px 20px 100px 20px;
-            flex: 2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
 
-            li {
-                margin-bottom: .5em;
-                font-size: 16px;
-            }
+        padding: 50px 20px 100px 20px;
+        flex: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
-            .tick {
-                display: inline-block;
-                height: 16px;
-                width: 25px;
-                border-bottom: 5px solid #21910C;
-                border-left: 5px solid #21910C;
-                transform: rotate(-45deg);
-                margin-right: 15px;
-            }
+        li {
+            margin-bottom: .5em;
+            font-size: 16px;
+        }
 
+        .tick {
+            display: inline-block;
+            height: 16px;
+            width: 25px;
+            border-bottom: 5px solid #21910C;
+            border-left: 5px solid #21910C;
+            transform: rotate(-45deg);
+            margin-right: 15px;
         }
 
 
-        .gradientTerugbellen {
-            flex: 1;
+    }
+
+    .gradientTerugbellen {
+        flex: 1;
+        color: $wit;
+        background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
+        padding: 2em 2em 4em 2em;
+
+        h2 {
             color: $wit;
-            background: radial-gradient(circle, rgba(255, 128, 0, 1) 0%, rgba(255, 162, 0, 1) 100%);
-            padding: 2em 2em 4em 2em;
+            padding-bottom: 20px;
+        }
 
-            h2 {
-                color: $wit;
-                padding-bottom: 20px;
-            }
-
-            p {
-                padding-bottom: 10px;
-            }
+        p {
+            padding-bottom: 10px;
+        }
 
 
-            .belOnsTerug {
-                position: relative;
-            }
+        .belOnsTerug {
+            position: relative;
+        }
 
-            .telNummerKnop {
-                height: 50px;
-                width: 100%;
-                border: none;
-                border-radius: 10px;
-                padding: 25px;
+        .telNummerKnop {
+            height: 50px;
+            width: 100%;
+            border: none;
+            border-radius: 10px;
+            padding: 25px;
 
-            }
+        }
 
-            .telNummerKnop::placeholder {
-                color: $platLicht;
-                font-size: 18px;
-                opacity: .5;
-            }
+        .telNummerKnop::placeholder {
+            color: $platLicht;
+            font-size: 18px;
+            opacity: .5;
+        }
 
-            button {
-                border-radius: 10px;
-                background-color: $ctaGroen;
-                color: $wit;
-                border: 1px solid $wit;
-                height: 50px;
-                width: 205px;
-                margin-top: 1em;
+        button {
+            border-radius: 10px;
+            background-color: $ctaGroen;
+            color: $wit;
+            border: 1px solid $wit;
+            height: 50px;
+            width: 205px;
+            margin-top: 1em;
 
-            }
         }
     }
 }
+
 
 
 .kennis {
@@ -371,10 +369,42 @@ main {
     }
 
     .caroussel {
-        flex: 1;
         display: flex;
+        flex-direction: column;
+        height: 420px;
+        overflow: hidden;
+
+        .carousselFotos {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            overflow-x: hidden;
+
+            .veld {
+                min-width: 50%;
+                padding: 1em;
+
+                img {
+                    height: auto;
+                    width: 100%
+                }
+
+            }
+        }
+
+        .knopjes {
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+            min-height: 3em;
+            overflow: hidden;
+        }
     }
 }
+
+
+
 
 .overMetHand {
     background: transparent linear-gradient(162deg, #FF8000 0%, #FFA200 100%) 0% 0% no-repeat padding-box;
@@ -564,29 +594,42 @@ footer {
         }
     }
 
-    .voordelen {
-        width: 55%;
-        margin: 0 auto;
-    }
+    .nieuwsVoordelen {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 100px;
 
-    .gradientTerugbellen {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        min-height: 400px;
+        .nieuwsveld {
+            min-width: 50%;
 
-        .telNummerKnop {
-            position: absolute;
-            margin-top: 1em;
-            left: 0;
-            top: 0;
         }
 
-        button {
-            position: absolute;
-            top: 0;
-            right: 0;
+        .voordelen {
+            min-width: 50%;
+            margin: 0 auto;
 
+        }
+
+        .gradientTerugbellen {
+            min-width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 400px;
+
+            .telNummerKnop {
+                position: absolute;
+                margin-top: 1em;
+                left: 0;
+                top: 0;
+            }
+
+            button {
+                position: absolute;
+                top: 0;
+                right: 0;
+
+            }
         }
     }
 
@@ -632,24 +675,70 @@ footer {
 
 @media only screen and (min-width: 1000px) {
 
+    nav {
+
+        .small {
+            display: none;
+        }
+
+        .wide {
+            display: flex;
+            width: 100%;
+            margin-top: 30px;
+            display: flex;
+            color: $wit;
+            align-items: center;
+
+
+            .menu {
+                flex: 10;
+                display: flex;
+                justify-content: space-around;
+                margin-left: 14%;
+                margin-right: 17%;
+            }
+
+            .login {
+                flex: 1;
+
+                button {
+                    width: 151px;
+                    height: 45px;
+                    border: none;
+                    font-size: 16px;
+                    background-color: $ctaGroen;
+                    color: $wit;
+                    border-radius: 8px;
+                }
+            }
+        }
+    }
+
     main {
         .partner {
             flex-direction: row;
+            padding-bottom: 40px;
 
             .container {
                 flex: 1;
-                //height: 100%;
-                //display: flex;
                 flex-direction: column;
+                text-align: left;
+
+
             }
 
             h1 {
-                width: 90%;
+                max-width: 100%;
+                margin: 0;
+                font-size: 38px;
+
             }
 
 
-            h4 {
-                width: 90%;
+            h3 {
+                max-width: 100%;
+                margin: 0;
+                font-size: 18px;
             }
 
             .foto {
@@ -664,6 +753,13 @@ footer {
                     transform: translateX(140px) scale(1.4, 1.4)
                 }
             }
+
+
+        }
+
+        :after {
+            right: 25vw;
+            top: -30vh;
         }
     }
 
@@ -671,11 +767,12 @@ footer {
 
         .card {
             min-width: 25%;
-        }
 
-        .flex2 {
-            min-width: 100%;
-            margin: 10em auto 2em auto;
+
+            .flex2 {
+                min-width: 100%;
+                margin: 10em auto 2em auto;
+            }
         }
     }
 }

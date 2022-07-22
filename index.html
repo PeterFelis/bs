@@ -211,40 +211,39 @@
             </h5>
         </div>
 
-        <div class="voordelenTB">
-            <div class="voordelen">
-                <h2>De Voordelen van Outhands</h2>
-                <ul>
-                    <li>
-                        <div class="tick"></div>Lorem ipsum dolor sit amet
-                    </li>
-                    <li>
-                        <div class="tick"></div>Lorem ipsum dolor sit amet.
-                    </li>
-                    <li>
-                        <div class="tick"></div>Lorem, ipsum dolor.
-                    </li>
-                    <li>
-                        <div class="tick"></div>Lorem ipsum dolor sit amet.
-                    </li>
-                    <li>
-                        <div class="tick"></div>Lorem ipsum dolor sit amet.
-                    </li>
-                </ul>
-            </div>
+        <div class="voordelen">
+            <h2>De Voordelen van Outhands</h2>
+            <ul>
+                <li>
+                    <div class="tick"></div>Lorem ipsum dolor sit amet
+                </li>
+                <li>
+                    <div class="tick"></div>Lorem ipsum dolor sit amet.
+                </li>
+                <li>
+                    <div class="tick"></div>Lorem, ipsum dolor.
+                </li>
+                <li>
+                    <div class="tick"></div>Lorem ipsum dolor sit amet.
+                </li>
+                <li>
+                    <div class="tick"></div>Lorem ipsum dolor sit amet.
+                </li>
+            </ul>
+        </div>
 
-            <div class="gradientTerugbellen">
-                <h2>Teruggebeld worden?</h2>
-                <p>
-                    Wij geven de voorkeur aan een persoonlijk gesprek. Laat je
-                    telefoonnummer achter.
-                </p>
-                <div class="belOnsTerug">
-                    <input type="tel" class="telNummerKnop" placeholder="Telefoonnummer" />
-                    <button>Bel mij terug</button>
-                </div>
+        <div class="gradientTerugbellen">
+            <h2>Teruggebeld worden?</h2>
+            <p>
+                Wij geven de voorkeur aan een persoonlijk gesprek. Laat je
+                telefoonnummer achter.
+            </p>
+            <div class="belOnsTerug">
+                <input type="tel" class="telNummerKnop" placeholder="Telefoonnummer" />
+                <button>Bel mij terug</button>
             </div>
         </div>
+
     </aside>
 
 
@@ -264,7 +263,22 @@
         </div>
 
         <div class="caroussel">
-            <!-- Carousel -->
+            <div class="carousselFotos">
+                <div class="veld">
+                    <img class='carFoto' />
+                    <p class="carText"></p>
+                </div>
+                <div class="veld">
+                    <img class='carFoto' />
+                    <p class="carText"></p>
+                </div>
+                <div class="veld">
+                    <img class='carFoto' />
+                    <p class="carText"></p>
+                </div>
+            </div>
+            <div class="knopjes"></div>
+        </div>
 
         </div>
     </section>
@@ -364,15 +378,92 @@
             </div>
         </div>
     </footer>
+
 </body>
 
 
-<script>
+<script type="text/javascript">
     let menu = document.getElementById('menu');
     menu.addEventListener('click', () => menu.style.left = "-100vw")
     document.getElementById("hamburger").addEventListener('click', () => {
         menu.style.left = "0px";
-    })
+    });
+
+
+
+    function Slider() {
+        // this.slides = [
+        //     { src: "assets/megan.png", text: 'megan met hoed' },
+        //     { src: "assets/rafaella.png", text: 'rafella witte trui' },
+        //     { src: "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
+        //     { src: "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
+        //     { src: "assets/priscilia.jpg", text: 'priscilia eet ijs' }
+        // ];
+
+        //  this.slides = [
+        //       { img: new Image().src = "assets/megan.png", text: 'megan met hoed' },
+        //       { img: new Image().src = "assets/rafaella.png", text: 'rafella witte trui' },
+        //       { img: new Image().src = "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
+        //       { img: new Image().src = "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
+        //       { img: new Image().src = "assets/priscilia.jpg", text: 'priscilia eet ijs' }
+        //   ];
+
+
+        // this.image = new Image();
+        // this.image.addEventListener('load', (e) => { console.log(e.target.height) })
+        // this.image.src = "assets/ibrahima.jpg"
+
+
+        // this.slides = [
+        //     { img: new Image() },
+        //     { img: new Image() },
+        //     { img: new Image() },
+        //     { img: new Image() },
+        //     { img: new Image() }
+        // ];
+
+        // for (let i = 0; i < this.slides.length; i++)
+        //     this.slides[i].img.addEventListener('load', (e) => { console.log('lala' + e.target.height) })
+
+
+        // this.slides[0].img.src = "assets/megan.png";
+
+        this.slides = [
+            { img: new Image().src = "assets/megan.png", text: 'megan met hoed' },
+            { img: new Image().src = "assets/rafaella.png", text: 'rafella witte trui' },
+            { img: new Image().src = "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
+            { img: new Image().src = "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
+            { img: new Image().src = "assets/priscilia.jpg", text: 'priscilia eet ijs' }
+        ];
+
+
+
+        this.fotos = document.getElementsByClassName('carFoto');
+        this.texten = document.getElementsByClassName('carText');
+        this.knopjes = document.querySelector('.knopjes');
+        let div;
+
+        for (let i = 0; i < this.slides.length; i++) {
+            div = document.createElement('div');
+            div.innerHTML = `&nbsp;${i + 1}&nbsp;`;
+            div.addEventListener('click', () => this.startMet(i));
+            this.knopjes.appendChild(div);
+        };
+
+        this.startMet = function (startFoto) {
+            console.log(this.slides)
+            for (let j = 0; j < 3; j++) {
+                //if (startFoto+j>this.slides.length){
+
+                this.fotos[j] = this.slides[j + startFoto].img;
+                this.texten[j].innerHTML = this.slides[j + startFoto].text;
+
+            }
+        }
+    }
+    slider = new Slider();
+    slider.startMet(0);
+
 </script>
 
 </html>

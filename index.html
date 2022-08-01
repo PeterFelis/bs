@@ -14,7 +14,8 @@
 <!-- https://glidejs.com/docs/setup/-->
 
 <body>
-    <main>
+
+    <main class="pagina">
         <nav>
             <div class="small">
                 <img class="logo" src="assets/outhands-logo-zwart (12).svg">
@@ -55,7 +56,7 @@
                 <button class="knopOverons">over ons</button>
             </div>
             <div class="foto">
-                <img class="lee" src="/assets/lee.png" />
+                <img class="lee" src="assets/lee.png" />
             </div>
         </div>
     </main>
@@ -69,7 +70,7 @@
 
 
 
-    <article class="opsomming">
+    <article class="pagina opsomming">
         <div class="card flex2">
             <h2 class="bold">Sed ut perspiciatis unde omnis iste.</h2>
             <p class="zwart">Lorem ipsum dolor sit amet consectetur <span class="bold">adipisicing</span>
@@ -115,12 +116,12 @@
     </article>
 
 
-    <article class="opsomming">
+    <article class="pagina opsomming">
         <div class="card">
             <div class="iconGradient">
                 <img src="assets/scale.svg">
             </div>
-            <div">
+            <div>
                 <h4 class="card-title">Website ontwikkeling</h4>
                 <div class="lijnOranje"></div>
                 <p class="card-text text-grijs">
@@ -128,7 +129,7 @@
                     Debitis
                     dolorem dicta voluptatem consequatur cum animi.
                 </p>
-        </div>
+            </div>
         </div>
 
         <div class="card">
@@ -150,7 +151,7 @@
             <div class="iconGradient">
                 <img src="assets/004-check-1.svg">
             </div>
-            <div">
+            <div>
                 <h4 class="card-title">Web applicaties</h4>
                 <div class="lijnOranje"></div>
                 <p class="card-text text-grijs">
@@ -158,7 +159,7 @@
                     Debitis
                     dolorem dicta voluptatem consequatur cum animi.
                 </p>
-        </div>
+            </div>
         </div>
 
         <div class="card">
@@ -177,7 +178,7 @@
         </div>
     </article>
 
-    <aside class="nieuwsVoordelen">
+    <aside class="pagina nieuwsVoordelen">
         <div class="nieuwsveld">
             <h2 class="bold">Het laatste nieuws</h2>
             <ul>
@@ -211,43 +212,41 @@
             </h5>
         </div>
 
-        <div class="voordelen">
-            <h2>De Voordelen van Outhands</h2>
-            <ul>
-                <li>
-                    <div class="tick"></div>Lorem ipsum dolor sit amet
-                </li>
-                <li>
-                    <div class="tick"></div>Lorem ipsum dolor sit amet.
-                </li>
-                <li>
-                    <div class="tick"></div>Lorem, ipsum dolor.
-                </li>
-                <li>
-                    <div class="tick"></div>Lorem ipsum dolor sit amet.
-                </li>
-                <li>
-                    <div class="tick"></div>Lorem ipsum dolor sit amet.
-                </li>
-            </ul>
-        </div>
+        <div class="voordelenTB">
+            <div class="voordelen">
+                <h2>De Voordelen van Outhands</h2>
+                <ul>
+                    <li>
+                        <div class="tick"></div>Lorem ipsum dolor sit amet
+                    </li>
+                    <li>
+                        <div class="tick"></div>Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        <div class="tick"></div>Lorem ipsum dolor sit amet.
+                    </li>
+                    <li>
+                        <div class="tick"></div>Lorem ipsum dolor sit amet.
+                    </li>
+                </ul>
+            </div>
 
-        <div class="gradientTerugbellen">
-            <h2>Teruggebeld worden?</h2>
-            <p>
-                Wij geven de voorkeur aan een persoonlijk gesprek. Laat je
-                telefoonnummer achter.
-            </p>
-            <div class="belOnsTerug">
-                <input type="tel" class="telNummerKnop" placeholder="Telefoonnummer" />
-                <button>Bel mij terug</button>
+            <div class="gradientTerugbellen">
+                <h2>Teruggebeld worden?</h2>
+                <p>
+                    Wij geven de voorkeur aan een persoonlijk gesprek. Laat je
+                    telefoonnummer achter.
+                </p>
+                <div class="belOnsTerug">
+                    <input type="tel" class="telNummerKnop" placeholder="Telefoonnummer" />
+                    <button>Bel mij terug</button>
+                </div>
             </div>
         </div>
-
     </aside>
 
 
-    <section class="kennis">
+    <section class="pagina kennis">
         <div class="usp">
             <h2 class="bold">Kennis van ons vak en dat van u</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -262,28 +261,74 @@
             </h5>
         </div>
 
+
         <div class="caroussel">
-            <div class="carousselFotos">
-                <div class="veld">
-                    <img class='carFoto' />
-                    <p class="carText"></p>
+            <div class="fotos">
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/meganGT.png">
+                        <img src="assets/caroussel/megan.png" />
+                    </picture>
+                    <div class="fotoText">Megan met hoed</div>
                 </div>
-                <div class="veld">
-                    <img class='carFoto' />
-                    <p class="carText"></p>
+
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/rafaellaGT.png">
+                        <img src="assets/caroussel/rafaella.png" />
+                    </picture>
+                    <div class="fotoText">Zwoel kijkende rafaella</div>
                 </div>
-                <div class="veld">
-                    <img class='carFoto' />
-                    <p class="carText"></p>
+
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/ibrahimaGT.png">
+                        <img src="assets/caroussel/ibrahima.png" />
+                    </picture>
+                    <div class="fotoText">Ibrihama met rode bril</div>
+                </div>
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/prisciliaGT.jpg">
+                        <img src="assets/caroussel/priscilia.jpg" />
+                    </picture>
+                    <div class="fotoText">Priscilia eet ijs.</div>
+                </div>
+
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/stefanGT.png">
+                        <img src="assets/caroussel/stefan.png" />
+                    </picture>
+                    <div class="fotoText">Stefan die eigenlijk Stefanie heet</div>
+                </div>
+
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/meganGT.png">
+                        <img src="assets/caroussel/megan.png" />
+                    </picture>
+                    <div class="fotoText">Megan met hoed</div>
+                </div>
+
+                <div class="fotoKaart">
+                    <picture>
+                        <source media="(min-width:1025px)" srcset="assets/caroussel/rafaellaGT.png">
+                        <img src="assets/caroussel/rafaella.png" />
+                    </picture>
+                    <div class="fotoText">Zwoel kijkende rafaella</div>
                 </div>
             </div>
-            <div class="knopjes"></div>
-        </div>
+            <div class="knoppenLijst">
 
-        </div>
+            </div>
+
+
+
+
     </section>
 
-    <article class="overMetHand">
+    <article class="pagina overMetHand">
         <img src="assets/Hand.svg">
         <div>
             <h2 class="bold">Dit is Outhands Internet & Media Full
@@ -319,7 +364,7 @@
         </div>
     </article>
 
-    <section class="kernwaarden">
+    <section class="pagina kernwaarden">
         <div class="tekst">
             <h2>Onze kernwaarde</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -341,13 +386,13 @@
             <button>Kom werken bij Outhands</button>
         </div>
         <div class="gezicht">
-            <img class="img-fluid" src="assets/Background.png" />
+            <img src="assets/Background.png" />
         </div>
     </section>
 
     <footer>
         <div class="footer">
-            <div class="contactInfo">
+            <div class="pagina contactInfo">
                 <div class="logo">
                     <img src="assets/outhands-logo-zwart (12)-1.svg" />
                 </div>
@@ -367,7 +412,7 @@
                     <p>Weekend gesloten</p>
                 </div>
             </div>
-            <div class="copyright">
+            <div class="pagina copyright">
                 <p class="payoff">Copyright 2022
                     &middot; Alle rechten voorbehouden &middot; Algemene
                     voorwaarden &middot; Privacyverklaring
@@ -379,6 +424,7 @@
         </div>
     </footer>
 
+
 </body>
 
 
@@ -389,81 +435,21 @@
         menu.style.left = "0px";
     });
 
-
-
-    function Slider() {
-        // this.slides = [
-        //     { src: "assets/megan.png", text: 'megan met hoed' },
-        //     { src: "assets/rafaella.png", text: 'rafella witte trui' },
-        //     { src: "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
-        //     { src: "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
-        //     { src: "assets/priscilia.jpg", text: 'priscilia eet ijs' }
-        // ];
-
-        //  this.slides = [
-        //       { img: new Image().src = "assets/megan.png", text: 'megan met hoed' },
-        //       { img: new Image().src = "assets/rafaella.png", text: 'rafella witte trui' },
-        //       { img: new Image().src = "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
-        //       { img: new Image().src = "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
-        //       { img: new Image().src = "assets/priscilia.jpg", text: 'priscilia eet ijs' }
-        //   ];
-
-
-        // this.image = new Image();
-        // this.image.addEventListener('load', (e) => { console.log(e.target.height) })
-        // this.image.src = "assets/ibrahima.jpg"
-
-
-        // this.slides = [
-        //     { img: new Image() },
-        //     { img: new Image() },
-        //     { img: new Image() },
-        //     { img: new Image() },
-        //     { img: new Image() }
-        // ];
-
-        // for (let i = 0; i < this.slides.length; i++)
-        //     this.slides[i].img.addEventListener('load', (e) => { console.log('lala' + e.target.height) })
-
-
-        // this.slides[0].img.src = "assets/megan.png";
-
-        this.slides = [
-            { img: new Image().src = "assets/megan.png", text: 'megan met hoed' },
-            { img: new Image().src = "assets/rafaella.png", text: 'rafella witte trui' },
-            { img: new Image().src = "assets/stefan.png", text: 'stefan die eigenlijk stefanie is' },
-            { img: new Image().src = "assets/ibrahima.jpg", text: 'Ibrahima met roze pruik' },
-            { img: new Image().src = "assets/priscilia.jpg", text: 'priscilia eet ijs' }
-        ];
-
-
-
-        this.fotos = document.getElementsByClassName('carFoto');
-        this.texten = document.getElementsByClassName('carText');
-        this.knopjes = document.querySelector('.knopjes');
-        let div;
-
-        for (let i = 0; i < this.slides.length; i++) {
-            div = document.createElement('div');
-            div.innerHTML = `&nbsp;${i + 1}&nbsp;`;
-            div.addEventListener('click', () => this.startMet(i));
-            this.knopjes.appendChild(div);
-        };
-
-        this.startMet = function (startFoto) {
-            console.log(this.slides)
-            for (let j = 0; j < 3; j++) {
-                //if (startFoto+j>this.slides.length){
-
-                this.fotos[j] = this.slides[j + startFoto].img;
-                this.texten[j].innerHTML = this.slides[j + startFoto].text;
-
-            }
+    const fotos = document.querySelector('.fotos');
+    const fotoKaarten = document.getElementsByClassName('fotoKaart');
+    const knoppenLijst = document.querySelector('.knoppenLijst')
+    for (let i = 0; i < fotoKaarten.length; i++) {
+        let knop = document.createElement('button');
+        knop.classList.add("knop");
+        if (i == 0) knop.classList.add('active');
+        knop.onclick = function () {
+            fotos.style.transform = 'translateX(-' + i * 35 + '%)';
+            let lijst = document.querySelectorAll('.active')
+            lijst.forEach(item => item.classList.remove('active'))
+            this.classList.add('active');
         }
+        knoppenLijst.appendChild(knop)
     }
-    slider = new Slider();
-    slider.startMet(0);
-
 </script>
 
 </html>

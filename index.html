@@ -20,10 +20,11 @@
             <div class="small">
                 <img class="logo" src="assets/outhands-logo-zwart (12).svg">
                 <div class="hamburger" id="hamburger">
-                    <div class="lijn"></div>
-                    <div class="lijn"></div>
-                    <div class="lijn"></div>
+                    <div id="lijnT" class="lijn"></div>
+                    <div id="lijnM" class="lijn"></div>
+                    <div id="lijnB" class="lijn"></div>
                 </div>
+
             </div>
 
 
@@ -62,15 +63,20 @@
     </main>
 
 
-    <div class="popmenu" id="menu">
+    <div class="popmenu verborgen" id="popup" onclick="toggleLijnen()">
         <ul>
             <li><a href="#overons">Over ons</a></li>
+            <li><a href="#diensten">Diensten</a></li>
+            <li><a href="#themas">Themas</a></li>
+            <li><a href="#nieuws">Nieuws</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li class="login"><button>Login</button></li>
         </ul>
     </div>
 
 
 
-    <article class="pagina opsomming">
+    <article id="diensten" class="pagina opsomming">
         <div class="card flex2">
             <h2 class="bold">Sed ut perspiciatis unde omnis iste.</h2>
             <p class="zwart">Lorem ipsum dolor sit amet consectetur <span class="bold">adipisicing</span>
@@ -178,7 +184,7 @@
         </div>
     </article>
 
-    <aside class="pagina nieuwsVoordelen">
+    <aside id="nieuws" class="pagina nieuwsVoordelen">
         <div class="nieuwsveld">
             <h2 class="bold">Het laatste nieuws</h2>
             <ul>
@@ -243,10 +249,10 @@
                 </div>
             </div>
         </div>
+
     </aside>
 
-
-    <section class="pagina kennis">
+    <section id="themas" class="pagina kennis">
         <div class="usp">
             <h2 class="bold">Kennis van ons vak en dat van u</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -328,7 +334,7 @@
 
     </section>
 
-    <article class="pagina overMetHand">
+    <article id="overons" class="pagina overMetHand">
         <img src="assets/Hand.svg">
         <div>
             <h2 class="bold">Dit is Outhands Internet & Media Full
@@ -391,7 +397,7 @@
     </section>
 
     <footer>
-        <div class="footer">
+        <div id="contact" class="footer">
             <div class="pagina contactInfo">
                 <div class="logo">
                     <img src="assets/outhands-logo-zwart (12)-1.svg" />
@@ -429,21 +435,45 @@
 
 
 <script type="text/javascript">
-    let menu = document.getElementById('menu');
-    menu.addEventListener('click', () => menu.style.left = "-100vw")
-    document.getElementById("hamburger").addEventListener('click', () => {
-        menu.style.left = "0px";
+    //javascript voor menu
+
+    let popup = document.getElementById('popup');
+    let lijnT = document.getElementById('lijnT')
+    let lijnM = document.getElementById('lijnM')
+    let lijnB = document.getElementById('lijnB')
+    let hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+        toggleLijnen();
     });
 
+    const toggleLijnen = () => {
+        popup.classList.toggle('verborgen');
+        popup.classList.toggle('transitie');
+        lijnT.classList.toggle('rotateKlok');
+        lijnM.classList.toggle('lijn');
+        lijnB.classList.toggle('rotateAntiKlok');
+    }
+
+    window.onresize = () => {
+        popup.classList.remove('transitie');
+        popup.classList.add('verborgen');
+    }
+
+
+    //javascript voor caroussel
     const fotos = document.querySelector('.fotos');
     const fotoKaarten = document.getElementsByClassName('fotoKaart');
     const knoppenLijst = document.querySelector('.knoppenLijst')
+    const caroussel = document.querySelector('.caroussel');
+
+    //console.log(fotoKaarten[0].clientWidth);
+    const shift = fotoKaarten[0].clientWidth;
     for (let i = 0; i < fotoKaarten.length; i++) {
         let knop = document.createElement('button');
         knop.classList.add("knop");
         if (i == 0) knop.classList.add('active');
         knop.onclick = function () {
-            fotos.style.transform = 'translateX(-' + i * 35 + '%)';
+            fotos.style.transform = 'translateX(-' + shift * i + 'px)';
             let lijst = document.querySelectorAll('.active')
             lijst.forEach(item => item.classList.remove('active'))
             this.classList.add('active');

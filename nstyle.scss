@@ -811,12 +811,19 @@ footer {
             align-items: center;
 
 
-            .menu {
+            ul {
                 flex: 10;
                 display: flex;
                 justify-content: space-around;
                 margin-left: 14%;
                 margin-right: 17%;
+
+
+                a {
+                    font-size: 16px;
+                    color: $wit;
+                    text-decoration: none;
+                }
             }
 
         }
@@ -892,37 +899,55 @@ footer {
     .nieuwsVoordelen {
         flex-direction: row;
 
+
         .nieuwsveld {
             max-width: 50%;
+            padding-top: 40px;
+            padding-bottom: 40px;
         }
 
         .voordelen {
             max-width: 100%;
+            padding: 0 0 0 40px;
         }
 
         .gradientTerugbellen {
             max-width: 100%;
-            padding: 30px;
+            height: aut0;
             margin-right: 50px;
             border-radius: 10px;
+            padding-top: 30px;
+            ;
         }
 
     }
 
     .kennis {
-
         flex-direction: row;
         flex-wrap: nowrap;
+
 
         .usp {
             width: 50%;
             padding: 40px;
+
+
         }
 
         .caroussel {
+            .fotos {
+                .fotoKaart {
+
+                    img {
+                        min-height: 233px;
+                    }
+                }
+            }
+
             width: 50%;
         }
     }
+
 
     .overMetHand {
         border-radius: 41px;
@@ -1077,6 +1102,7 @@ footer {
 
     .nieuwsVoordelen {
         position: relative;
+        padding-top: 100px;
     }
 
     .nieuwsVoordelen:after {

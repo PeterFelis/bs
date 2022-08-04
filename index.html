@@ -15,10 +15,10 @@
 
 <body>
 
-    <main class="pagina">
+    <main id="home" class="pagina">
         <nav>
             <div class="small">
-                <img class="logo" src="assets/outhands-logo-zwart (12).svg">
+                <a href="#home"><img class="logo" src="assets/outhands-logo-zwart (12).svg"></a>
                 <div class="hamburger" id="hamburger">
                     <div id="lijnT" class="lijn"></div>
                     <div id="lijnM" class="lijn"></div>
@@ -29,14 +29,14 @@
 
 
             <div class="wide">
-                <img class="logo" src="assets/outhands-logo-zwart (12).svg" />
-                <div class="menu">
-                    <div>Over ons</div>
-                    <div>Diensten</div>
-                    <div>Thema's</div>
-                    <div>Nieuws</div>
-                    <div>Contact</div>
-                </div>
+                <a href="#home"><img class="logo" src="assets/outhands-logo-zwart (12).svg" /></a>
+                <ul>
+                    <li><a href="#overons">Over ons</a></li>
+                    <li><a href="#diensten">Diensten</a></li>
+                    <li><a href="#themas">Themas</a></li>
+                    <li><a href="#nieuws">Nieuws</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
                 <div class="login">
                     <button>Login</button>
                 </div>
@@ -400,7 +400,9 @@
         <div id="contact" class="footer">
             <div class="pagina contactInfo">
                 <div class="logo">
-                    <img src="assets/outhands-logo-zwart (12)-1.svg" />
+                    <a href="#home">
+                        <img src="assets/outhands-logo-zwart (12)-1.svg" />
+                    </a>
                 </div>
                 <div class="naw">
                     <p class="bold">Outhands Internet & Media</p>

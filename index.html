@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="nstyle.css">
 
 
-    <title>19-07-2022</title>
+    <title>Outhands Internet & Media</title>
 </head>
 
 <!-- https://glidejs.com/docs/setup/-->
@@ -468,14 +468,17 @@
     const knoppenLijst = document.querySelector('.knoppenLijst')
     const caroussel = document.querySelector('.caroussel');
 
-    //console.log(fotoKaarten[0].clientWidth);
-    const shift = fotoKaarten[0].clientWidth;
+    let shift = fotoKaarten[0].offsetWidth;
+    window.addEventListener('resize', () => shift = fotoKaarten[0].offsetWidth);
+
+
     for (let i = 0; i < fotoKaarten.length; i++) {
         let knop = document.createElement('button');
         knop.classList.add("knop");
         if (i == 0) knop.classList.add('active');
         knop.onclick = function () {
             fotos.style.transform = 'translateX(-' + shift * i + 'px)';
+            console.log(shift)
             let lijst = document.querySelectorAll('.active')
             lijst.forEach(item => item.classList.remove('active'))
             this.classList.add('active');

@@ -437,6 +437,8 @@
 
 
 <script type="text/javascript">
+  
+
     //javascript voor menu
 
     let popup = document.getElementById('popup');
@@ -463,13 +465,14 @@
 
 
     //javascript voor caroussel
-    const fotos = document.querySelector('.fotos');
-    const fotoKaarten = document.getElementsByClassName('fotoKaart');
-    const knoppenLijst = document.querySelector('.knoppenLijst')
-    const caroussel = document.querySelector('.caroussel');
-
-    let shift = fotoKaarten[0].offsetWidth;
-    window.addEventListener('resize', () => shift = fotoKaarten[0].offsetWidth);
+    
+    
+    let fotos = document.querySelector('.fotos');
+    let fotoKaarten = document.getElementsByClassName('fotoKaart');
+    let knoppenLijst = document.querySelector('.knoppenLijst')
+    let caroussel = document.querySelector('.caroussel');
+    let shift;
+    
 
 
     for (let i = 0; i < fotoKaarten.length; i++) {
@@ -477,8 +480,12 @@
         knop.classList.add("knop");
         if (i == 0) knop.classList.add('active');
         knop.onclick = function () {
+            let shift = fotoKaarten[0].scrollWidth;
+
+            var p = document.getElementById("target");
+            let padding=(parseInt(window.getComputedStyle(fotoKaarten[0]).padding));
+            shift-=padding/2;
             fotos.style.transform = 'translateX(-' + shift * i + 'px)';
-            console.log(shift)
             let lijst = document.querySelectorAll('.active')
             lijst.forEach(item => item.classList.remove('active'))
             this.classList.add('active');
